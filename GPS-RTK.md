@@ -25,7 +25,7 @@
   
   -Since RTK needs at least 2.4kbps updated in about every half a second, good network quality is necessary for a accurate locating.
   
-  -Once the base is in a static place and powered, the base will start calculating its own coordinate with method called PPP(Precise Point Positioning), and start to 'stabilize' its location.
+  -If the base location is not predefined, once the base is in a static place and powered, the base will start calculating its own coordinate with method called PPP(Precise Point Positioning), and start to 'stabilize' its location.
   
   -If condidion is optimal, after about 3~5 minutes, PPP calculation will be done, and rover will be able to loacte it self correctly.
   

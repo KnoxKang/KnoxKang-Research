@@ -7,6 +7,7 @@ Basic principal of GPS-RTK.
   Theoretically, accuracy of RTK system could reach 2mm.
   
 Why is technology like GPS-RTK is needed?
+
   -Because with conventional way, loaction accuracy can only be around 3m('civialian' code) to 30cm('military' code).
   
 How does independant GPS-RTK work?

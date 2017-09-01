@@ -44,5 +44,9 @@
   
 ## Q&A
 
-Q1. why does NTRIP require users ID/PW to 'listen' to their broadcast?
+### Q1. why does NTRIP require users ID/PW to 'listen' to their broadcast?
 A1. it is not NTRIP protocol that requires ID/PW. it is required when connecting to NTRIP caster(which controls data flow from multiple base stations to multiple rovers)
+
+### Q2. what is 'integer ambiguity'?
+A2. it means that carrier wave's ambiguity is always integer. reason for this is when GPS reciver is mesuring distance between the satalite and the antenea, it uses NCO(numerically controlled oscillator)to generate a signal with same frequency and phase to the incoming signal. However, becuase of inablilty of NCO to recognize between one carrier wave cycle and the other, signal generated from NCO converges to the nearest cycle. This makes the ambiguity of carrier wave always integer, thus remains as a potential error.
+

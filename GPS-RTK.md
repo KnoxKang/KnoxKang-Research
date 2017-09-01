@@ -29,11 +29,12 @@ How does independant GPS-RTK work?
 ---------------------------------------------------------------------
   
 How does GPS-RTK with NTRIP(which is Network Tranport of RTCM)?
+
   -In this case user don't need a base to start a RTK system, so, minimal requirement is reduced to a single RTK-able GPS reciver attached to a internet accesable device.
   
-  Procedure to use NTRIP is actually very easy, user only need to know, or register ID/PW to any NTRIP caster, and type that information in to the rover.
+  -Procedure to use NTRIP is actually very easy, user only need to know, or register ID/PW to any NTRIP caster, and type that information in to the rover.
   
-  If the rover has a correct information, rover will connect through network device to NTRIP caster to retrive list of connection points and let user to choose one, or just choose what's the closest based on roughly estimated position of it self.
+  -If the rover has a correct information, rover will connect through network device to NTRIP caster to retrive list of connection points and let user to choose one, or just choose what's the closest based on roughly estimated position of it self.
   
   
 Q1. why does NTRIP require users ID/PW to 'listen' to their broadcast?

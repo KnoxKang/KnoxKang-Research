@@ -42,6 +42,7 @@
   -------------------------------------
   
   
-  
+## Q&A
+
 Q1. why does NTRIP require users ID/PW to 'listen' to their broadcast?
 A1. it is not NTRIP protocol that requires ID/PW. it is required when connecting to NTRIP caster(which controls data flow from multiple base stations to multiple rovers)

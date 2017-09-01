@@ -6,7 +6,7 @@
   to solve this low accuracy, things like [GPS_RTK](https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK.md), DGPS(Dual-GPS), PPP(Precision Point Positioning), using multiple bands, etc had emerged.
   in this document, the focus will be on GNSS system with single antenea.
   
-  using multi-bands
+  Using multi-bands
     
 -This method can erase ionosphear-error(an error that happens because when GPS signal goes through the ionosphear, the signal can't go straight.) which consists up to 50% of inaccuracy when its the worst.
     method is simple enough. by comparing two or more carrier wave's phase and its pesudo ranges calculated from each signals, state of ionosphear could be caulculated, and error could be removed.

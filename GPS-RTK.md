@@ -23,6 +23,7 @@ How does independant GPS-RTK work?
   
   If condidion is optimal, after about 3~5 minutes, PPP calculation will be done, and rover will be able to loacte it self correctly.
   
+---------------------------------------------------------------------
   
 How does GPS-RTK with NTRIP(which is Network Tranport of RTCM)?
   In this case user don't need a base to start a RTK system, so, minimal requirement is reduced to a single RTK-able GPS reciver attached to a internet accesable device.

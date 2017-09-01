@@ -7,5 +7,6 @@
   in this document, the focus will be on GNSS system with single antenea.
   
   using multi-bands
-    This method can erase ionosphear-error(an error that happens because when GPS signal goes through the ionosphear, the signal can't go straight.) which consists up to 50% of inaccuracy when its the worst.
+    
+-This method can erase ionosphear-error(an error that happens because when GPS signal goes through the ionosphear, the signal can't go straight.) which consists up to 50% of inaccuracy when its the worst.
     method is simple enough. by comparing two or more carrier wave's phase and its pesudo ranges calculated from each signals, state of ionosphear could be caulculated, and error could be removed.

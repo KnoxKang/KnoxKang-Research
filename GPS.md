@@ -1,5 +1,3 @@
-#KnoxKang Research
-
   GPS is a shortened word for "Global positioning system", which is one of GNSS( global navigation satellite system ). 
   
   GPS satelite trasmits mainly on L1, L2 frequency, but some of the latest satelite transmits on L5 as well.

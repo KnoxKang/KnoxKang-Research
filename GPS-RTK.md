@@ -17,7 +17,7 @@
   
   -GPS-RTK works based on Carrier-wave-tracking. This method uses carrier wave unlikly to DGPS(Dual GPS) to calculate distance between at least 5(one for spare) satalites and the point where the user is. 
   
-  -Although RTK system has a same problem as with carrier wave tracking([integer ambiguity] (https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK.md#q2-what-is-integer-ambiguity)), RTK solves this problem within about 10 seconds if all conditions(no multi-path, large number of satalites available, receviers are multi-frequncy, etc..) are optimal.
+  -Although RTK system has a same problem as with carrier wave tracking([integer ambiguity](https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK.md#q2-what-is-integer-ambiguity)), RTK solves this problem within about 10 seconds if all conditions(no multi-path, large number of satalites available, receviers are multi-frequncy, etc..) are optimal.
   
   -Standard RTK system is composed of two GPS recevers, one for 'base'(which stays stationary) purpose, and one for 'rover'(which moves around) purpose.
   

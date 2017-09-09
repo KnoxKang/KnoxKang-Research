@@ -15,7 +15,7 @@
 GPS-RTK는 GPS 신호에 담긴 정보를 사용하는 DGPS(Dual-GPS)와는 달리 반송파 추적을 통해 최소 5개 이상의(1개는 예비용) 위성으로부터 거리를 측정하여 위치를 측위한다.
   
 
-엄연히 GPS-RTK도 반송파 추적법을 쓰는 만큼 같은 반송파 추적법을 사용하는 단일 안테나 GPS와 같은 문제점을 안고 있지만([integer ambiguity](https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK.md#q2-what-is-integer-ambiguity)), RTK는 모든 조건이 안정적인 경우(멀티 패스 없음, 여러개의 위성 관측 가능. 수신기가 다중 주파수 수신 가능 등) 10초 내외로 문제를 보정해낸다.
+엄연히 GPS-RTK도 반송파 추적법을 쓰는 만큼 같은 반송파 추적법을 사용하는 단일 안테나 GPS와 같은 문제점을 안고 있지만([integer ambiguity](https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK-KO.md#q2-integer-ambiguity란-무엇인가)), RTK는 모든 조건이 안정적인 경우(멀티 패스 없음, 여러개의 위성 관측 가능. 수신기가 다중 주파수 수신 가능 등) 10초 내외로 문제를 보정해낸다.
   
 
 기본적인 RTK시스템은 두개의 GPS 수신기로 구성되는데. 하나는 한 지점에 머무르는 베이스, 다른 하나는 움직여 다니는 로버 역할이다.

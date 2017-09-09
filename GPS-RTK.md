@@ -25,8 +25,8 @@
   If the base location is not predefined, once the base is in a static place and powered, the base will start calculating its own coordinate with method called PPP(Precise Point Positioning), and start to 'stabilize' its location.
   
   If condidion is optimal, after about 3~5 minutes, PPP calculation will be done, and rover will be able to loacte it self correctly.
-  
----------------------------------------------------------------------
+
+
   
 ## How does GPS-RTK with NTRIP(which is Network Tranport of RTCM)?
 
@@ -36,7 +36,6 @@
   
   If the rover has a correct information, rover will connect through network device to NTRIP caster to retrive list of connection points and let user to choose one, or just choose what's the closest based on roughly estimated position of it self.
   
-  -------------------------------------
   
   
 ## Q&A

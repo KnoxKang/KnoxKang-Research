@@ -1,6 +1,6 @@
 # KnoxKang-Research
 
-## Basic principal of GPS-RTK.
+## Basic principal of GPS-RTK. 
 
   RTK(Real Time Kinematic) is a technology to enhance acurracy of GNSS system.
   It uses measurements of the phase of GPS signal's carrier wave, not the informational content of the signal.

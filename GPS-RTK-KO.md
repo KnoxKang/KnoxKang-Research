@@ -1,11 +1,11 @@
 # KnoxKang-Research
 
-## Basic principal of GPS-RTK. 
+## GPS-RTK의 정의
 
-  RTK(Real Time Kinematic) is a technology to enhance acurracy of GNSS system.
-  It uses measurements of the phase of GPS signal's carrier wave, not the informational content of the signal.
-  Theoretically, accuracy of RTK system could reach 2mm.
-  
+  RTK란 Real Time Kinematic의 약자로서, GNSS의 정밀도를 향상시키는 기술중 하나이다.
+  이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 
+  이론상의 오차범위를 2mm내로 억제할 수 있다.
+  
 ## Why is technology like GPS-RTK needed?
 
   Because with conventional way, locating accuracy can only be around 3m('civialian' code) to 30cm('military' code).

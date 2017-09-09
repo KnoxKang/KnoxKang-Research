@@ -4,46 +4,46 @@
 
   RTK란 Real Time Kinematic의 약자로서, GNSS의 정밀도를 향상시키는 기술중 하나이다.
   이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 
-  이론상의 오차범위를 2mm내로 억제할 수 있다.
+  이론상 오차범위를 2mm내로 억제할 수 있다.
   
 ## 어째서 GPS-RTK같은 기술이 필요한가?
 
-  Because with conventional way, locating accuracy can only be around 3m('civialian' code) to 30cm('military' code).
+  종전의 방법으로는 민간용 정보의 경우 3m, 군용 정보로는 30cm의 정밀도를 확보할 수 있는데 둘 다 충분히 정밀한 측위가 필요한 플랫폼(측량, 자율주행 차량 등)에는 충분치 않은 정밀도이기 때문에.
+
+## 독립 GPS-RTK시스템은 어떻게 동작하는가?
+  
+GPS-RTK는 GPS 신호에 담긴 정보를 사용하는 DGPS(Dual-GPS)와는 달리 반송파 추적을 통해 최소 5개 이상의(1개는 예비용) 위성으로부터 거리를 측정하여 위치를 측위한다.
   
 
-## How does independant GPS-RTK work?
+엄연히 GPS-RTK도 반송파 추적법을 쓰는 만큼 같은 반송파 추적법을 사용하는 단일 안테나 GPS와 같은 문제점을 안고 있지만([integer ambiguity](https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK.md#q2-what-is-integer-ambiguity)), RTK는 모든 조건이 안정적인 경우(멀티 패스 없음, 여러개의 위성 관측 가능. 수신기가 다중 주파수 수신 가능 등) 10초 내외로 문제를 보정해낸다.
   
-  GPS-RTK works based on Carrier-wave-tracking. This method uses carrier wave unlikly to DGPS(Dual GPS) to calculate distance between at least 5(one for spare) satalites and the point where the user is. 
+
+기본적인 RTK시스템은 두개의 GPS 수신기로 구성되는데. 하나는 한 지점에 머무르는 베이스, 다른 하나는 움직여 다니는 로버 역할이다.
   
-  Although RTK system has a same problem as with carrier wave tracking([integer ambiguity](https://github.com/KnoxKang/KnoxKang-Research/blob/master/GPS-RTK.md#q2-what-is-integer-ambiguity)), RTK solves this problem within about 10 seconds if all conditions(no multi-path, large number of satalites available, receviers are multi-frequncy, etc..) are optimal.
+이중 베이스는 사전에 이미 측위가 완료된 좌표에 설치되고, 그 후 로버는 베이스로부터 보정신호를 수신해서 자신의 위치를 교정하게 된다.
   
-  Standard RTK system is composed of two GPS recevers, one for 'base'(which stays stationary) purpose, and one for 'rover'(which moves around) purpose.
+이때 RTK시스템이 정상적으로 동작하려면 RTK 시스템을 구성하고 있는 네트워크 속도는 2.4kb를 0.5초마다 한번씩은 갱신할 수 있는 4.8kbps, 또는 그보다 빠른 속도가 지원되는 네트워크로 연결될 필요가 있다.
   
-  With two recivers, one of them will work as a 'base station', which stays in a predefined static location while the other receiver works as a 'rover', which retrives correction data from the base station to define where the rover is.
+만약 베이스가 사전에 측위가 완료된 좌표에 놓이지 않는다면 베이스는 PPP(Pricise Point Positioning)을 이용해 자신의 위치를 측위하기 시작하면 점차 '안정화'되기 시작한다.
   
-  Since RTK needs at least 2.4kbps updated in about every half a second, good network quality is necessary for a accurate locating.
-  
-  If the base location is not predefined, once the base is in a static place and powered, the base will start calculating its own coordinate with method called PPP(Precise Point Positioning), and start to 'stabilize' its location.
-  
-  If condidion is optimal, after about 3~5 minutes, PPP calculation will be done, and rover will be able to loacte it self correctly.
+모든 조건이 좋다는 가정 하에 3~5분 뒤에는 PPP 연산이 끝나고, 그 뒤부터 로버는 보정 신호를 수신해 자신의 위치를 정확히 측위할 수 있다.
 
 
   
-## How does GPS-RTK with NTRIP(which is Network Tranport of RTCM)?
+## GPS-RTK는 어떻게 NTRIP(Network Tranport of RTCM)을 사용하는가?
 
-  In this case user don't need a base to start a RTK system, so, minimal requirement is reduced to a single RTK-able GPS reciver attached to a internet accesable device.
+GPS-RTK가 NTRIP을 사용하는 경우 베이스는 필요가 없어진다. 따라서 RTK시스템을 구성하는 최소 요건은 NTRIP시스템을 사용할 수 있는 GPS-RTK수신기 하나와 인터넷에 접속할 수 있는 장비로 줄어든다.
+
   
-  Procedure to use NTRIP is actually very easy, user only need to know, or register ID/PW to any NTRIP caster, and type that information in to the rover.
+NTRIP을 사용하는 절차는 사실 굉장히 간단하다. 사용자는 그저 NTRIP캐스터에 ID/PW를 알거나, 가입만 하면 되고, 나머지 절차는 로버에 해당 정보(NTRIP캐스터 주소, 포트. ID/PW)를 입력하게 되면 자동적으로 진행된다.
   
-  If the rover has a correct information, rover will connect through network device to NTRIP caster to retrive list of connection points and let user to choose one, or just choose what's the closest based on roughly estimated position of it self.
-  
+  만약 로버가 맞는 정보를 입력 받았다면 로버는 인터넷 망을 통해 NTRIP캐스터에 접속해서 connection point목록을 다운로드 받을것이고, 사용자가 그중 하나를 선택하도록 제시하거나, 가측위된 로버의 위치에서 가장 가까운 connection point에 접속해서 보정 정보를 수신한다.
   
   
 ## Q&A
 
-### Q1. why does NTRIP require users ID/PW to 'listen' to their broadcast?
-A1. it is not NTRIP protocol that requires ID/PW. it is required when connecting to NTRIP caster(which controls data flow from multiple base stations to multiple rovers)
+### Q1. 어째서 NTRIP은 ID/PW를 사용해야만 보정정보를 수신할 수 있는가?
+A1. NTRIP프로토콜 자체는 ID/PW를 요구하지 않는것이 맞다. 그러나 다수의 NTRIP베이스와 다수의 로버를 중간에서 관제하는 NTRIP caster가 ID/PW를 요구하는것 뿐이다.
 
-### Q2. what is 'integer ambiguity'?
-A2. it means that carrier wave's ambiguity is always integer. reason for this is when GPS reciver is mesuring distance between the satalite and the antenea, it uses NCO(numerically controlled oscillator)to generate a signal with same frequency and phase to the incoming signal. However, becuase of inablilty of NCO to recognize between one carrier wave cycle and the other, signal generated from NCO converges to the nearest cycle. This makes the ambiguity of carrier wave always integer, thus remains as a potential error.
-
+### Q2. 'Integer ambiguity'란 무엇인가?
+A2. '정수 불확실성'으로 번역되는 inetger ambiguity는 GPS수신기가 수신기와 위성간의 거리를 측정할때 NCO(numerically controlled oscillator)를 사용해 GPS신호와 동일한 파장과 위상을 갖는 신호를 생성한 후, 그것을 사용해 거리를 예상하기 때문에 일어나는 현상이다. 이때 NCO는 신호를 생성한 후 NCO로서는 신호 사이클을 구분할 수 없으니 그 신호를 가장 가까운 위상에 맞추려고 시도하게 되고, 따라서 언제나 거리 불확실성은 파장의 정수배로 나타나며, 오차로 남게 된다.

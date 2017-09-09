@@ -6,9 +6,10 @@
   이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 
   이론상의 오차범위를 2mm내로 억제할 수 있다.
   
-## Why is technology like GPS-RTK needed?
+## 어째서 GPS-RTK같은 기술이 필요한가?
 
   Because with conventional way, locating accuracy can only be around 3m('civialian' code) to 30cm('military' code).
+  
 
 ## How does independant GPS-RTK work?
   

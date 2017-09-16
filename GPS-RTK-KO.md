@@ -49,3 +49,4 @@ A1. NTRIP프로토콜 자체는 ID/PW를 요구하지 않는것이 맞다. 그�
 
 ### Q2. 'Integer ambiguity'란 무엇인가?
 A2. '정수 불확실성'으로 번역되는 inetger ambiguity는 GPS수신기가 수신기와 위성간의 거리를 측정할때 NCO(numerically controlled oscillator)를 사용해 GPS신호와 동일한 파장과 위상을 갖는 신호를 생성한 후, 그것을 사용해 거리를 예상하기 때문에 일어나는 현상이다. 이때 NCO는 신호를 생성한 후 NCO로서는 신호 사이클을 구분할 수 없으니 그 신호를 가장 가까운 위상에 맞추려고 시도하게 되고, 따라서 언제나 거리 불확실성은 파장의 정수배로 나타나며, 오차로 남게 된다.
+![Diagram of integer ambiguity](http://garrett.seepersad.org/uploads/2/2/4/4/22441458/8086772_orig.png?472)

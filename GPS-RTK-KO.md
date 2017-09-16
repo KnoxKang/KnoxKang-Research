@@ -5,7 +5,7 @@
   RTK란 Real Time Kinematic의 약자로서, GNSS의 정밀도를 향상시키는 기술중 하나이다.
   이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 비유하자면 m단위 자(C/A 코드)를 사용하는게 아니라 mm단위 자(반송파)를 사용하는것과 같으며, 
   이론상 오차범위를 2mm내로 억제할 수 있다.
-  ![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
+
   
 ## 어째서 GPS-RTK같은 기술이 필요한가?
 
@@ -20,6 +20,7 @@ GPS-RTK는 GPS 신호에 담긴 정보를 사용하는 DGPS(Dual-GPS)와는 달�
   
 
 기본적인 RTK시스템은 두개의 GPS 수신기로 구성되는데. 하나는 한 지점에 머무르는 베이스, 다른 하나는 움직여 다니는 로버 역할이다.
+  ![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
   
 이중 베이스는 사전에 이미 측위가 완료된 좌표에 설치되고, 그 후 로버는 베이스로부터 보정신호를 수신해서 자신의 위치를 교정하게 된다.
   

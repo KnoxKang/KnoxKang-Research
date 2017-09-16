@@ -13,7 +13,7 @@
 ## 독립 GPS-RTK시스템은 어떻게 동작하는가?
     
 ![EMLID](http://www.robotshop.com/media/files/images3/rb-eml-09-1.jpg)
-독립 GPS-RTK시스템을 구축할 수 있는 EMLID사의 GPS-RTK칩
+>독립 GPS-RTK시스템을 구축할 수 있는 EMLID사의 GPS-RTK칩
   
 GPS-RTK는 GPS 신호에 담긴 정보를 사용하는 DGPS(Dual-GPS)와는 달리 반송파 추적을 통해 최소 5개 이상의(1개는 예비용) 위성으로부터 거리를 측정하여 위치를 측위한다.
   

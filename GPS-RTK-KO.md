@@ -6,8 +6,9 @@
   이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 비유하자면 m단위 자(C/A 코드)를 사용하는게 아니라 mm단위 자(반송파)를 사용하는것과 같으며, 
   이론상 오차범위를 2mm내로 억제할 수 있다.
 
-EMLID사의 GPS-RTK칩
+
 ![EMLID](http://www.robotshop.com/media/files/images3/rb-eml-09-1.jpg)
+EMLID사의 GPS-RTK칩
 
 ## 어째서 GPS-RTK같은 기술이 필요한가?
 

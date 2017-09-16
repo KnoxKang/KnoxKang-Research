@@ -6,15 +6,14 @@
   이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 비유하자면 m단위 자(C/A 코드)를 사용하는게 아니라 mm단위 자(반송파)를 사용하는것과 같으며, 
   이론상 오차범위를 2mm내로 억제할 수 있다.
 
-
-![EMLID](http://www.robotshop.com/media/files/images3/rb-eml-09-1.jpg)
-EMLID사의 GPS-RTK칩
-
 ## 어째서 GPS-RTK같은 기술이 필요한가?
 
   종전의 방법으로는 민간용 정보의 경우 3m, 군용 정보로는 30cm의 정밀도를 확보할 수 있는데 둘 다 충분히 정밀한 측위가 필요한 플랫폼(측량, 자율주행 차량 등)에는 충분치 않은 정밀도이기 때문에.
 
 ## 독립 GPS-RTK시스템은 어떻게 동작하는가?
+    
+![EMLID](http://www.robotshop.com/media/files/images3/rb-eml-09-1.jpg)
+독립 GPS-RTK시스템을 구축할 수 있는 EMLID사의 GPS-RTK칩
   
 GPS-RTK는 GPS 신호에 담긴 정보를 사용하는 DGPS(Dual-GPS)와는 달리 반송파 추적을 통해 최소 5개 이상의(1개는 예비용) 위성으로부터 거리를 측정하여 위치를 측위한다.
   

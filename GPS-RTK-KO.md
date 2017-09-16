@@ -1,5 +1,7 @@
 # KnoxKang-Research
 
+![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
+
 ## GPS-RTK의 정의
 
   RTK란 Real Time Kinematic의 약자로서, GNSS의 정밀도를 향상시키는 기술중 하나이다.

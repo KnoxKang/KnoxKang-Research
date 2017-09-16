@@ -1,12 +1,11 @@
 # KnoxKang-Research
 
-![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
-
 ## GPS-RTK의 정의
 
   RTK란 Real Time Kinematic의 약자로서, GNSS의 정밀도를 향상시키는 기술중 하나이다.
   이 기술은 GPS 신호에 담긴 정보(C/A 코드, P(Y) 코드 등) 사용하지 않고 GPS의 반송파(carrier wave) 그 자체를 이용하는 기술로서, 비유하자면 m단위 자(C/A 코드)를 사용하는게 아니라 mm단위 자(반송파)를 사용하는것과 같으며, 
   이론상 오차범위를 2mm내로 억제할 수 있다.
+  ![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
   
 ## 어째서 GPS-RTK같은 기술이 필요한가?
 

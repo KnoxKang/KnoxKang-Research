@@ -20,7 +20,8 @@ GPS-RTK는 GPS 신호에 담긴 정보를 사용하는 DGPS(Dual-GPS)와는 달�
   
 
 기본적인 RTK시스템은 두개의 GPS 수신기로 구성되는데. 하나는 한 지점에 머무르는 베이스, 다른 하나는 움직여 다니는 로버 역할이다.
-  ![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
+
+![Basic of GPS-RTK](https://www.e-education.psu.edu/geog862/sites/www.e-education.psu.edu.geog862/files/images/Lesson07/Real_Time_Kinematic.png)
   
 이중 베이스는 사전에 이미 측위가 완료된 좌표에 설치되고, 그 후 로버는 베이스로부터 보정신호를 수신해서 자신의 위치를 교정하게 된다.
   
